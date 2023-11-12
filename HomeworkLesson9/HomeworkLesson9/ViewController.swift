@@ -7,13 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    let customView = FirstView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print(1)
+        view.addSubview(customView)
+        customView.translatesAutoresizingMaskIntoConstraints = false
+        customView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        customView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        customView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        customView.heightAnchor.constraint(equalToConstant: 200).isActive = true
     }
-
-
 }
 
